@@ -3,7 +3,7 @@
 import { useEffect } from 'react';
 import { usePathname } from 'next/navigation';
 
-export function useScrollWithOffset(offset = 150) {
+export function useScrollWithOffset(offset: 150) {
   const pathname = usePathname();
 
   // Function to handle click navigation

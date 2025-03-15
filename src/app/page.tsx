@@ -66,7 +66,7 @@ export default function Home() {
         </div>
       </div>
       {/* about section */}
-      <div id="about" className="w-full flex flex-col justify-center items-center scroll-mt-[150px]">
+      <div id="about" className="w-full flex flex-col justify-center items-center">
         <h1 className="text-white text-3xl tracking-[-0.05em] mt-16">
           about.
         </h1>
