@@ -1,0 +1,113 @@
+/* Unique Font Family */
+
+/* Unique-Thin */
+@font-face {
+    font-family: 'Unique';
+    src: url('/fonts/Unique-Thin.woff2') format('woff2'),
+         url('/fonts/Unique-Thin.woff') format('woff'),
+         url('/fonts/Unique-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Unique-ExtraLight */
+@font-face {
+    font-family: 'Unique';
+    src: url('/fonts/Unique-ExtraLight.woff2') format('woff2'),
+         url('/fonts/Unique-ExtraLight.woff') format('woff'),
+         url('/fonts/Unique-ExtraLight.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Unique-Light */
+@font-face {
+    font-family: 'Unique';
+    src: url('/fonts/Unique-Light.woff2') format('woff2'),
+         url('/fonts/Unique-Light.woff') format('woff'),
+         url('/fonts/Unique-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Unique-Regular */
+@font-face {
+    font-family: 'Unique';
+    src: url('/fonts/Unique-Regular.woff2') format('woff2'),
+         url('/fonts/Unique-Regular.woff') format('woff'),
+         url('/fonts/Unique-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Unique-Medium */
+@font-face {
+    font-family: 'Unique';
+    src: url('/fonts/Unique-Medium.woff2') format('woff2'),
+         url('/fonts/Unique-Medium.woff') format('woff'),
+         url('/fonts/Unique-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Unique-SemiBold */
+@font-face {
+    font-family: 'Unique';
+    src: url('/fonts/Unique-SemiBold.woff2') format('woff2'),
+         url('/fonts/Unique-SemiBold.woff') format('woff'),
+         url('/fonts/Unique-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Unique-Bold */
+@font-face {
+    font-family: 'Unique';
+    src: url('/fonts/Unique-Bold.woff2') format('woff2'),
+         url('/fonts/Unique-Bold.woff') format('woff'),
+         url('/fonts/Unique-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Thunder Font Family */
+
+/* Thunder-HC (High Contrast) */
+@font-face {
+    font-family: 'Thunder';
+    src: url('/fonts/Thunder-HC.woff2') format('woff2'),
+         url('/fonts/Thunder-HC.woff') format('woff'),
+         url('/fonts/Thunder-HC.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Thunder-LC (Low Contrast) */
+@font-face {
+    font-family: 'Thunder';
+    src: url('/fonts/Thunder-LC.woff2') format('woff2'),
+         url('/fonts/Thunder-LC.woff') format('woff'),
+         url('/fonts/Thunder-LC.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Thunder-BlackLC (Low Contrast Black) */
+@font-face {
+    font-family: 'ThunderBlack';
+    src: url('/fonts/Thunder-BoldLC.woff2') format('woff2'),
+         url('/fonts/Thunder-BoldLC.woff') format('woff'),
+         url('/fonts/Thunder-BoldLC.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+} 
