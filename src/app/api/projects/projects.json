@@ -1,0 +1,24 @@
+[
+    {
+        "slug": "lanalicious",
+        "title": "Lanalicious",
+        "stack": {
+            "src": "/images/framer.avif",
+            "alt": "Framer"
+        },
+        "category": "Web Design",
+        "description": "This is a description for Project One.",
+        "image": "/images/Mockup.png"
+    },
+    {
+        "slug": "eduface",
+        "title": "Eduface",
+        "stack": {
+            "src": "/images/vue.png",
+            "alt": "Vue.js"
+        },
+        "category": "Web Development",
+        "description": "This is a description for Project Two.",
+        "image": "/images/Mockup2.png"
+    }
+]
