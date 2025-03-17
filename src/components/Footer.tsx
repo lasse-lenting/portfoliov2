@@ -7,7 +7,7 @@ export default function Footer() {
                 {/* CTA Section */}
                 <div className="mb-16">
                     <h2 className="text-white text-4xl md:text-5xl font-thunder-black tracking-[-0.03em] mb-6">
-                        Let's create something<br />together.
+                        Let&apos;s create something<br />together.
                     </h2>
                     <div className="flex flex-col sm:flex-row gap-4">
                         <Link 
