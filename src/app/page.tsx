@@ -44,10 +44,10 @@ export default function Home() {
             alt="Logo"
             width={650}
             height={650}
-            className="opacity-85 object-contain max-h-full"
+            className="opacity-85 object-contain max-h-full mb-[100px]"
             priority
           />
-          <div className="absolute inset-0 flex flex-col items-center justify-center mt-[40px]">
+          <div className="absolute inset-0 flex flex-col items-center justify-center mt-[-50px]">
             <p className="text-white text-[35vw] sm:text-[38vw] md:text-[222px] font-thunder-black tracking-[-0.01em]">
               L<span className="tracking-[-0.015em]">E</span>NT<span className="tracking-[-0.02em]">ING</span>
             </p>

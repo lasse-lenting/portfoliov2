@@ -26,10 +26,10 @@ export default function Project(project: ProjectProps) {
                 <img
                     src={project.image}
                     alt={project.title}
-                    className="rounded h-full w-full object-cover transform scale-150 translate-y-20 translate-x-[-10px] transition-transform duration-300"
+                    className="rounded h-full w-full object-cover transform scale-150 translate-y-20  transition-transform duration-300"
                     sizes="(max-width: 768px) 100vw, 50vw"
                 />
-                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent opacity-100 h-1/2" />
+                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent opacity-100 h-[40px]" />
             </div>
             <div className="px-4 mt-4 overflow-visible">
                 <div className="relative flex gap-2 items-center overflow-visible">
