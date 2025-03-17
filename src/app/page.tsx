@@ -3,7 +3,7 @@ import Image from "next/image";
 import Project from "@/components/ProjectCard";
 import Footer from "@/components/Footer";
 import { useEffect, useState } from 'react';
-import { useRouter } from 'next/navigation';
+
 import { useScrollWithOffset } from '@/hooks/useScrollWithOffset';
 
 interface Project {
