@@ -20,7 +20,6 @@ interface Project {
 
 export default function Home() {
   const [projects, setProjects] = useState<Project[]>([]);
-  const router = useRouter();
   
   // Use the hook to handle URL hash navigation with a 150px offset
   useScrollWithOffset(150);
