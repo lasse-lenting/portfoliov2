@@ -17,10 +17,10 @@ export default function Footer() {
                             Get in touch
                         </Link>
                         <Link 
-                            href="mailto:hello@lenting.com" 
+                            href="mailto:hello@lasselenting.nl" 
                             className="inline-block border border-white/30 text-white px-8 py-3 font-thunder text-xl tracking-wide hover:bg-white/10 transition-colors"
                         >
-                            hello@lenting.com
+                            hello@lasselenting.nl
                         </Link>
                     </div>
                 </div>
@@ -33,7 +33,7 @@ export default function Footer() {
                             Lasse is a web developer, 3D modeller, and graphic designer creating visually stunning and user-friendly experiences.
                         </p>
                         <p className="text-white/50 text-sm">
-                            Based in Copenhagen, Denmark
+                            Based in Rotterdam, The Netherlands.
                         </p>
                     </div>
                     
