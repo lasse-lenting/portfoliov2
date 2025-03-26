@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import React from "react";
 import Link from "next/link";
 import { ArrowLeft, ExternalLink, Github } from "lucide-react";
+import Footer from "@/components/Footer";
 
 interface Project {
   title: string;
@@ -81,6 +82,7 @@ export default function ProjectDetails({
   }
 
   return (
+    <>
     <div className="min-h-screen bg-black text-white pt-[120px] pb-20">
       {/* Back button */}
       <div className="max-w-7xl mx-auto px-4 mb-8">
@@ -181,5 +183,7 @@ export default function ProjectDetails({
         </div>
       </div>
     </div>
+    <Footer />
+    </>
   );
 }
