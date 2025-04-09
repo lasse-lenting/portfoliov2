@@ -23,13 +23,13 @@ export default function Footer() {
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link
-              href="/contact"
+              href="#"
               className="inline-flex items-center justify-center bg-[#5E38F7] text-white px-8 py-3 font-thunder text-xl tracking-wide hover:bg-[#4E2EE3] transition-colors"
             >
               <span className="mr-2">Afspraak inplannen</span>
             </Link>
             <Link
-              href="/contact"
+              href="#"
               className="inline-block text-white px-8 py-3 font-thunder text-xl tracking-wide hover:text-white/80 transition-colors"
             >
               Neem contact op
@@ -64,7 +64,7 @@ export default function Footer() {
               <div className="flex items-center">
                 <Phone size={18} className="mr-2 flex-shrink-0" />
                 <a
-                  href="tel:+31612345678"
+                  href="#"
                   className="hover:text-white transition-colors"
                 >
                   Plan a call
@@ -74,7 +74,7 @@ export default function Footer() {
               <div className="flex items-center">
                 <Mail size={18} className="mr-2 flex-shrink-0" />
                 <a
-                  href="mailto:hello@lasselenting.nl"
+                  href="#"
                   className="hover:text-white transition-colors"
                 >
                   hello@lasselenting.nl
@@ -89,7 +89,7 @@ export default function Footer() {
             <ul className="space-y-3">
               <li>
                 <Link
-                  href="/services"
+                  href="#"
                   className="text-white/70 hover:text-white transition-colors"
                 >
                   Web Development
@@ -97,7 +97,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="/services"
+                  href="#"
                   className="text-white/70 hover:text-white transition-colors"
                 >
                   3D Modeling
@@ -105,7 +105,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="/services"
+                  href="#"
                   className="text-white/70 hover:text-white transition-colors"
                 >
                   UI/UX Design
@@ -113,7 +113,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="/services"
+                  href="#"
                   className="text-white/70 hover:text-white transition-colors"
                 >
                   Graphic Design
@@ -130,7 +130,7 @@ export default function Footer() {
             <ul className="space-y-3">
               <li>
                 <Link
-                  href="/about"
+                  href="#"
                   className="text-white/70 hover:text-white transition-colors"
                 >
                   Over mij
@@ -138,7 +138,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="/projects"
+                  href="#"
                   className="text-white/70 hover:text-white transition-colors"
                 >
                   Portfolio
@@ -146,7 +146,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="/process"
+                  href="#"
                   className="text-white/70 hover:text-white transition-colors"
                 >
                   Mijn werkwijze
@@ -154,7 +154,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="/testimonials"
+                  href="#"
                   className="text-white/70 hover:text-white transition-colors"
                 >
                   Beoordelingen
@@ -162,7 +162,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="/blog"
+                  href="#"
                   className="text-white/70 hover:text-white transition-colors"
                 >
                   Blog
@@ -177,7 +177,7 @@ export default function Footer() {
             <ul className="space-y-3">
               <li>
                 <Link
-                  href="/help"
+                  href="#"
                   className="text-white/70 hover:text-white transition-colors"
                 >
                   Help
@@ -185,7 +185,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="/terms"
+                  href="#"
                   className="text-white/70 hover:text-white transition-colors"
                 >
                   Algemene voorwaarden
@@ -193,7 +193,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="/privacy"
+                  href="#"
                   className="text-white/70 hover:text-white transition-colors"
                 >
                   Privacy & AVG
@@ -211,7 +211,7 @@ export default function Footer() {
 
           <div className="flex space-x-6">
             <a
-              href="https://instagram.com"
+              href="#"
               target="_blank"
               rel="noopener noreferrer"
               className="text-white/70 hover:text-white transition-colors"
@@ -219,7 +219,7 @@ export default function Footer() {
               <Instagram size={20} />
             </a>
             <a
-              href="https://facebook.com"
+              href="#"
               target="_blank"
               rel="noopener noreferrer"
               className="text-white/70 hover:text-white transition-colors"
@@ -227,7 +227,7 @@ export default function Footer() {
               <Facebook size={20} />
             </a>
             <a
-              href="https://linkedin.com"
+              href="#"
               target="_blank"
               rel="noopener noreferrer"
               className="text-white/70 hover:text-white transition-colors"
@@ -235,7 +235,7 @@ export default function Footer() {
               <Linkedin size={20} />
             </a>
             <a
-              href="https://github.com"
+              href="#"
               target="_blank"
               rel="noopener noreferrer"
               className="text-white/70 hover:text-white transition-colors"
