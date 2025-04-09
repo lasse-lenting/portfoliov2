@@ -2,7 +2,7 @@
 import Image from "next/image";
 import Project from "@/components/ProjectCard";
 import Footer from "@/components/Footer";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import Link from "next/link";
 import { useScrollWithOffset } from "@/hooks/useScrollWithOffset";
 
@@ -20,6 +20,12 @@ interface Project {
 
 export default function Home() {
   const [projects, setProjects] = useState<Project[]>([]);
+  const [orangeBoxCols, setOrangeBoxCols] = useState(1); // Default column span for orange box
+  const [pinkBoxCols, setPinkBoxCols] = useState(3); // Default column span for pink box
+  const [isDragging, setIsDragging] = useState(false);
+  const dragHandleRef = useRef<HTMLDivElement>(null);
+  const startPosRef = useRef(0);
+  const containerRef = useRef<HTMLDivElement>(null);
 
   // Use the hook to handle URL hash navigation with a 150px offset
   useScrollWithOffset(150);
@@ -33,6 +39,100 @@ export default function Home() {
 
     fetchProjects();
   }, []);
+
+  // Setup drag handlers
+  useEffect(() => {
+    const handleMouseDown = (e: MouseEvent) => {
+      setIsDragging(true);
+      startPosRef.current = e.clientX;
+      document.body.style.cursor = 'col-resize';
+      e.preventDefault(); // Prevent text selection during drag
+    };
+
+    const handleMouseMove = (e: MouseEvent) => {
+      if (!isDragging) return;
+      
+      const containerWidth = containerRef.current?.offsetWidth || 0;
+      const diff = e.clientX - startPosRef.current;
+      const percentMove = diff / containerWidth;
+      
+      // REVERSED: Now expanding when dragging LEFT
+      if (percentMove < -0.1 && orangeBoxCols === 1 && pinkBoxCols > 2) {
+        // Expand orange box & shrink pink box
+        setOrangeBoxCols(2);
+        setPinkBoxCols(2);
+        startPosRef.current = e.clientX;
+      } else if (percentMove > 0.1 && orangeBoxCols === 2 && pinkBoxCols < 3) {
+        // Shrink orange box & expand pink box
+        setOrangeBoxCols(1);
+        setPinkBoxCols(3);
+        startPosRef.current = e.clientX;
+      }
+    };
+
+    const handleMouseUp = () => {
+      setIsDragging(false);
+      document.body.style.cursor = 'default';
+    };
+
+    // Touch support for mobile
+    const handleTouchStart = (e: TouchEvent) => {
+      setIsDragging(true);
+      startPosRef.current = e.touches[0].clientX;
+      e.preventDefault();
+    };
+
+    const handleTouchMove = (e: TouchEvent) => {
+      if (!isDragging) return;
+      
+      const containerWidth = containerRef.current?.offsetWidth || 0;
+      const diff = e.touches[0].clientX - startPosRef.current;
+      const percentMove = diff / containerWidth;
+      
+      // REVERSED: Now expanding when dragging LEFT for touch
+      if (percentMove < -0.1 && orangeBoxCols === 1 && pinkBoxCols > 2) {
+        // Expand orange box & shrink pink box
+        setOrangeBoxCols(2);
+        setPinkBoxCols(2);
+        startPosRef.current = e.touches[0].clientX;
+      } else if (percentMove > 0.1 && orangeBoxCols === 2 && pinkBoxCols < 3) {
+        // Shrink orange box & expand pink box
+        setOrangeBoxCols(1);
+        setPinkBoxCols(3);
+        startPosRef.current = e.touches[0].clientX;
+      }
+    };
+
+    const handleTouchEnd = () => {
+      setIsDragging(false);
+    };
+
+    const dragHandle = dragHandleRef.current;
+    if (dragHandle) {
+      // Mouse events
+      dragHandle.addEventListener('mousedown', handleMouseDown);
+      document.addEventListener('mousemove', handleMouseMove);
+      document.addEventListener('mouseup', handleMouseUp);
+      
+      // Touch events
+      dragHandle.addEventListener('touchstart', handleTouchStart, { passive: false });
+      document.addEventListener('touchmove', handleTouchMove, { passive: false });
+      document.addEventListener('touchend', handleTouchEnd);
+    }
+
+    return () => {
+      if (dragHandle) {
+        // Remove mouse events
+        dragHandle.removeEventListener('mousedown', handleMouseDown);
+        // Remove touch events
+        dragHandle.removeEventListener('touchstart', handleTouchStart);
+      }
+      document.removeEventListener('mousemove', handleMouseMove);
+      document.removeEventListener('mouseup', handleMouseUp);
+      document.removeEventListener('touchmove', handleTouchMove);
+      document.removeEventListener('touchend', handleTouchEnd);
+    };
+  }, [isDragging, orangeBoxCols, pinkBoxCols]);
 
   return (
     <div className="flex gap-[200px] sm:gap-[400px] flex-col">
@@ -130,22 +230,53 @@ export default function Home() {
               </button>
               </Link>
             </div>
-            <div className="bg-pink-400 rounded-xl overflow-hidden p-6 col-span-4 sm:col-span-3 items-center row-span-1 flex flex-col justify-center sm:justify-between transition-all hover:opacity-90">
-              <div className="text-stone-800 font-thunder-black text-center">
-                <h2 className="text-5xl md:text-5xl leading-none">FULL</h2>
-                <h2 className="text-5xl md:text-5xl leading-none">
-                  STACK
-                </h2>
-                <h2 className="text-5xl md:text-5xl leading-none">DEVELOPER</h2>
+            
+            {/* Container for the last boxes with draggable handle */}
+            <div 
+              ref={containerRef} 
+              className="col-span-5 sm:col-span-4 row-span-1 grid grid-cols-4 gap-4 relative"
+            >
+              {/* Pink box with dynamic columns */}
+              <div 
+                className={`bg-pink-400 rounded-xl overflow-hidden p-6 col-span-${pinkBoxCols} flex flex-col justify-center sm:justify-between transition-all duration-300 hover:opacity-90`}
+              >
+                <div className="text-stone-800 font-thunder-black text-center">
+                  <h2 className="text-5xl md:text-5xl leading-none">FULL</h2>
+                  <h2 className="text-5xl md:text-5xl leading-none">
+                    STACK
+                  </h2>
+                  <h2 className="text-5xl md:text-5xl leading-none">DEVELOPER</h2>
+                </div>
               </div>
-            </div>
-            {/* Icons Box */}
-            <div className="bg-orange-500 rounded-lg text-stone-900 text-xl overflow-hidden p-6 col-span-1 sm:col-span-1 row-span-1 flex flex-col items-center justify-center gap-4 transition-all hover:opacity-90">
-                {/* rotterdam text with random font stretch per letter */}
+              
+              {/* Orange box with expandable width and draggable handle */}
+              <div 
+                className={`bg-orange-500 rounded-xl text-stone-900 text-xl overflow-hidden p-6 flex flex-col items-center justify-center gap-4 transition-all duration-300 hover:opacity-90 col-span-${orangeBoxCols} relative`}
+              >
+                {/* Icons */}
                 <i className="devicon-nextjs-plain"></i>
                 <i className="devicon-react-original"></i>
                 <i className="devicon-tailwindcss-original"></i>
                 <i className="devicon-photoshop-plain"></i>
+                
+                {/* Draggable handle inside the orange box, on its left edge */}
+                <div 
+                  ref={dragHandleRef}
+                  className={`absolute top-0 bottom-0 left-0 w-4 bg-white/20 hover:bg-white/40 cursor-col-resize z-10 transition-all ${
+                    isDragging ? 'bg-white/50' : ''
+                  }`}
+                >
+                  {/* Visual indicator for the handle */}
+                  <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-1 h-14 bg-white/70 rounded"></div>
+                  
+                  {/* Small animated arrow indicator - now pointing LEFT */}
+                  <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-0 hover:opacity-100 transition-opacity">
+                    <div className="relative">
+                      <div className="absolute w-3 h-3 border-t-2 border-l-2 border-white transform rotate-[-45deg] -left-5 -top-3"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

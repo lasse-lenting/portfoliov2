@@ -69,7 +69,7 @@ export default function ProjectDetails({
       <div className="flex flex-col items-center justify-center h-screen bg-black text-white">
         <h1 className="text-3xl font-bold mb-4">Project Not Found</h1>
         <p className="mb-8">
-          The project you're looking for doesn't exist or has been removed.
+          The project you&apos;re looking for doesn&apos;t exist or has been removed.
         </p>
         <Link
           href="/"
