@@ -71,7 +71,7 @@ export default function Navbar() {
               </a>
             </li>
             <li className='bg-white rounded-md px-6 py-3 flex items-center transition-all duration-300 w-[106px] hover:w-[150px] hover:bg-black group'>
-              <a className="text-black group-hover:text-white mx-auto transition" href="#">
+              <a className="text-black group-hover:text-white mx-auto transition" href="mailto:lasselenting@gmail.com">
                 Contact
               </a>
             </li>

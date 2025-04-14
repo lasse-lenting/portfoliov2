@@ -10,6 +10,7 @@ interface ProjectProps {
         alt: string;
     }  // image for stack (like framer, react, etc.)
     category: string;
+    smalldescription: string;
     description: string;
     image: string;
     slug: string;
@@ -61,7 +62,7 @@ export default function Project(project: ProjectProps) {
                     </div>
                 </div>
                 <p className="text-white/60 text-sm mt-2">{project.category}</p>
-                <p className="text-white/80 mt-4">{project.description}</p>
+                <p className="text-white/80 mt-4">{project.smalldescription}</p>
             </div>
         </div>
     );

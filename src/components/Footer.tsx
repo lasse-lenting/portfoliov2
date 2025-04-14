@@ -1,11 +1,9 @@
 import Link from "next/link";
 import {
   Instagram,
-  Facebook,
   Linkedin,
   Github,
   Mail,
-  Phone,
   MapPin,
 } from "lucide-react";
 
@@ -15,7 +13,7 @@ export default function Footer() {
       {/* CTA Section */}
       <div className="max-w-[1200px] mx-auto px-4 mb-16">
         <div className="bg-[#14142B] p-12 rounded-lg text-center">
-          <h2 className="text-white text-4xl md:text-5xl font-thunder-black tracking-[-0.03em] mb-4">
+          <h2 className="text-white text-4xl md:text-5xl font-thunder-black mb-4">
             Jouw succesverhaal begint hier!
           </h2>
           <p className="text-white/70 mb-8">
@@ -26,13 +24,7 @@ export default function Footer() {
               href="#"
               className="inline-flex items-center justify-center bg-[#5E38F7] text-white px-8 py-3 font-thunder text-xl tracking-wide hover:bg-[#4E2EE3] transition-colors"
             >
-              <span className="mr-2">Afspraak inplannen</span>
-            </Link>
-            <Link
-              href="#"
-              className="inline-block text-white px-8 py-3 font-thunder text-xl tracking-wide hover:text-white/80 transition-colors"
-            >
-              Neem contact op
+              <span className="mr-2">Neem contact op</span>
             </Link>
           </div>
         </div>
@@ -49,7 +41,7 @@ export default function Footer() {
                   LL
                 </span>
               </div>
-              <span className="text-white font-thunder text-xl">Lasse.one</span>
+              <span className="text-white font-thunder text-xl">Lasse Lenting</span>
             </div>
 
             <div className="space-y-4 text-white/70">
@@ -61,15 +53,6 @@ export default function Footer() {
                 </div>
               </div>
 
-              <div className="flex items-center">
-                <Phone size={18} className="mr-2 flex-shrink-0" />
-                <a
-                  href="#"
-                  className="hover:text-white transition-colors"
-                >
-                  Plan a call
-                </a>
-              </div>
 
               <div className="flex items-center">
                 <Mail size={18} className="mr-2 flex-shrink-0" />
@@ -77,50 +60,13 @@ export default function Footer() {
                   href="#"
                   className="hover:text-white transition-colors"
                 >
-                  hello@lasselenting.nl
+                  lasselenting@gmail.com
                 </a>
               </div>
             </div>
           </div>
 
-          {/* Column 2: Services */}
-          <div>
-            <h3 className="text-white text-xl font-thunder mb-6">Diensten</h3>
-            <ul className="space-y-3">
-              <li>
-                <Link
-                  href="#"
-                  className="text-white/70 hover:text-white transition-colors"
-                >
-                  Web Development
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#"
-                  className="text-white/70 hover:text-white transition-colors"
-                >
-                  3D Modeling
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#"
-                  className="text-white/70 hover:text-white transition-colors"
-                >
-                  UI/UX Design
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#"
-                  className="text-white/70 hover:text-white transition-colors"
-                >
-                  Graphic Design
-                </Link>
-              </li>
-            </ul>
-          </div>
+
 
           {/* Column 3: Direct Links */}
           <div>
@@ -130,7 +76,7 @@ export default function Footer() {
             <ul className="space-y-3">
               <li>
                 <Link
-                  href="#"
+                  href="#about"
                   className="text-white/70 hover:text-white transition-colors"
                 >
                   Over mij
@@ -138,69 +84,19 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="#"
+                  href="#projects"
                   className="text-white/70 hover:text-white transition-colors"
                 >
                   Portfolio
                 </Link>
               </li>
-              <li>
-                <Link
-                  href="#"
-                  className="text-white/70 hover:text-white transition-colors"
-                >
-                  Mijn werkwijze
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#"
-                  className="text-white/70 hover:text-white transition-colors"
-                >
-                  Beoordelingen
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#"
-                  className="text-white/70 hover:text-white transition-colors"
-                >
-                  Blog
-                </Link>
-              </li>
+
+
+
             </ul>
           </div>
 
           {/* Column 4: Site Info */}
-          <div>
-            <h3 className="text-white text-xl font-thunder mb-6">Site info</h3>
-            <ul className="space-y-3">
-              <li>
-                <Link
-                  href="#"
-                  className="text-white/70 hover:text-white transition-colors"
-                >
-                  Help
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#"
-                  className="text-white/70 hover:text-white transition-colors"
-                >
-                  Algemene voorwaarden
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#"
-                  className="text-white/70 hover:text-white transition-colors"
-                >
-                  Privacy & AVG
-                </Link>
-              </li>
-            </ul>
-          </div>
         </div>
 
         {/* Copyright & Social */}
@@ -211,7 +107,7 @@ export default function Footer() {
 
           <div className="flex space-x-6">
             <a
-              href="#"
+              href="https://www.instagram.com/lasselenting/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-white/70 hover:text-white transition-colors"
@@ -219,15 +115,7 @@ export default function Footer() {
               <Instagram size={20} />
             </a>
             <a
-              href="#"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-white/70 hover:text-white transition-colors"
-            >
-              <Facebook size={20} />
-            </a>
-            <a
-              href="#"
+              href="https://www.linkedin.com/in/lasse-lenting/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-white/70 hover:text-white transition-colors"
@@ -235,7 +123,7 @@ export default function Footer() {
               <Linkedin size={20} />
             </a>
             <a
-              href="#"
+              href="https://www.github.com/lasse-lenting"
               target="_blank"
               rel="noopener noreferrer"
               className="text-white/70 hover:text-white transition-colors"

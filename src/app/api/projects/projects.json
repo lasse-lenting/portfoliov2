@@ -1,24 +1,28 @@
 [
     {
         "slug": "lanalicious",
+        "liveUrl": "https://fuchsia-information-545503.framer.app/",
         "title": "Lanalicious",
         "stack": {
             "src": "/images/framer.avif",
             "alt": "Framer"
         },
         "category": "Web Design",
-        "description": "This is a description for Project One.",
+        "smalldescription": "Eigen merk, inclusief custom 3D-animatie en flesontwerp in Spline. Gericht op zowel inkopers als particuliere klanten.",
+        "description": "Voor mijn eigen merk Lanalicious heb ik alles zelf opgezet: van het product tot de visuele presentatie. Het wolwasmiddel is gemaakt op basis van lanoline, speciaal voor mensen die hun wollen kleding op een natuurlijke manier willen verzorgen. Om het merk goed te presenteren aan zowel inkopers als particuliere klanten, heb ik een 3D-animatie gemaakt in Spline. Het 3D-model van de fles heb ik ook zelf ontworpen, zodat het precies past bij de uitstraling die ik voor ogen had. Dit project combineert mijn passie voor creatief ontwerpen met mijn interesse in productontwikkeling en branding.",
         "image": "/images/Mockup.png"
     },
     {
         "slug": "eduface",
+        "liveUrl": "https://eduface.nl",
         "title": "Eduface",
         "stack": {
             "src": "/images/vue.png",
             "alt": "Vue.js"
         },
         "category": "Web Development",
-        "description": "This is a description for Project Two.",
+        "smalldescription": "Scrum-project voor externe opdrachtgever voor school. Verantwoordelijk voor de backend (o.a. tokensysteem), maar ook frontendwerk opgepakt.",
+        "description": "Voor mijn eerste externe schoolopdracht werk ik met een Scrum-team aan Eduface, een AI-tool die docenten helpt om automatisch feedback te geven aan leerlingen. De tool vergelijkt ingeleverd werk met een rubric en genereert op basis daarvan gerichte feedback. Mijn hoofdrol in dit project ligt bij de backend, waar ik onder andere verantwoordelijk ben voor de implementatie van een tokensysteem. Daarnaast heb ik ook meerdere frontend-taken opgepakt om het project verder te helpen. Het is een uitdagende opdracht waarbij ik veel leer over samenwerking, AI-integraties en het bouwen van een schaalbare applicatie.",
         "image": "/images/Mockup2.png"
     }
 ]
