@@ -183,12 +183,14 @@ export default function About() {
                     </div>
                     {/* contact box */}
                     <div className="bg-blue-500 rounded-xl overflow-hidden p-6 col-span-5 sm:col-span-4 row-span-1 flex items-center justify-center transition-all hover:opacity-100 relative">
-                        <Link href="mailto:lasselenting@gmail.com" className="relative z-10 h-full flex items-center justify-center">
-                            <button className="bg-amber-50 hover:text-blue-500 text-stone-800 font-semibold  py-2 px-5 rounded-full flex items-center justify-center gap-2 transition-all duration-700 group">
-                                <span className="relative z-10 text-sm sm:text-base mt-[-3px] hover:text-blue-500">Contact me <span className="text-xl">→</span></span>
-                                <span className="absolute inset-0 bg-amber-50 rounded-full group-hover:rounded-xl transform scale-100 group-hover:scale-[5] transition-all duration-700"></span>
-                            </button>
-                        </Link>
+                        <div className="flex gap-4">
+                            <Link href="/files/cv.pdf" target="_blank" className="relative z-10 h-full flex items-center justify-center">
+                                <button className="bg-amber-50 hover:text-blue-500 text-stone-800 font-semibold py-2 px-5 rounded-full flex items-center justify-center gap-2 transition-all duration-700 group">
+                                    <span className="relative z-10 text-sm sm:text-base mt-[-3px] hover:text-blue-500">Download CV <span className="text-xl">↓</span></span>
+                                    <span className="absolute inset-0 bg-amber-50 rounded-full group-hover:rounded-xl transform scale-100 group-hover:scale-[5] transition-all duration-700"></span>
+                                </button>
+                            </Link>
+                        </div>
                     </div>
 
                     {/* Container for the last boxes with draggable handle */}
